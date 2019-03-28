@@ -7,7 +7,7 @@ app = Flask("cityescapes")
 port = int(os.environ.get("PORT", 5000))
 
 pu = pyunsplash.PyUnsplash(api_key=os.environ.get("api_key", None))
-W_API_KEY = os.environ.get("API_KEY", None)
+W_API_KEY = os.environ.get("W_API_KEY", None)
 
 @app.route("/")
 def index():
