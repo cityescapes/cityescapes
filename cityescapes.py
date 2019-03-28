@@ -2,11 +2,11 @@ from flask import Flask, jsonify, render_template, request
 import requests
 import pyunsplash
 
-pu = pyunsplash.PyUnsplash(api_key='34e948ce5f96be47a8a3bf8ffc94ee01dfc630bb83173bf8e1746733a4ace054')
-
-API_KEY = "e3e43d3fd3b29fa08c734d0146a9d0a0"
-
 app = Flask("cityescapes")
+port = int(os.environ.get("PORT", 5000))
+
+pu = pyunsplash.PyUnsplash(api_key=os.environ.get("api_key", None))
+W_API_KEY = os.environ.get("API_KEY", None)
 
 @app.route("/")
 def index():
