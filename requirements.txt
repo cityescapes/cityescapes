@@ -1,2 +1,4 @@
 flask==0.12.2
 Jinja2==2.10
+pyunsplash==1.0.0b8
+requests==2.21.0
