@@ -1,17 +1,31 @@
+<!DOCTYPE html>
 <html>
-  <form action="/result" method="post">
-    <label for="user_search">Search</label>
-    <input type="text" name="user_search">
-    <input type="submit">
-  </form>
+  <head>
+    <title>CityEscapes</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  </head>
 
-{% if search%}
-  <p>You searched for {{search}}, the weather is {{weather.condition}} and it is {{weather.temperature}} degrees celsius and here are the photos: {{result}}</p>
+  <body>
 
-  <div>
-    {% for img in images %}
-    <img src="{{ img }}" width=400>
-    {% endfor %}
-  </div>
-{% endif %}
+    <div class="cityescapes-title">CityEscapes</div>
+
+    <form action="/result" method="post">
+      <label for="user_search">Search</label>
+      <input type="text" name="user_search">
+      <input type="submit">
+    </form>
+
+    {% if search%}
+    <p>You searched for {{search}}, the weather is {{weather.condition}} and it is {{weather.temperature}} degrees celsius and here are the photos: {{result}}</p>
+
+    <div>
+      {% for img in images %}
+      <img src="{{ img }}" width=400>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+  </body>
 </html>
