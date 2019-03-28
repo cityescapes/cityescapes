@@ -13,5 +13,21 @@ body {
 }
 
 form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+img {
+  flex: 25%;
+  padding: 0 4px;
+  margin-top: 8px;
+  vertical-align: middle;
+  flex-direction: column;
 }

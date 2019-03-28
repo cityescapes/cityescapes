@@ -21,9 +21,11 @@
     <p>You searched for {{search}}, the weather is {{weather.condition}} and it is {{weather.temperature}} degrees celsius and here are the photos: {{result}}</p>
 
     <div>
-      {% for img in images %}
-      <img src="{{ img }}" width=400>
-      {% endfor %}
+      <div class="images">
+        {% for img in images %}
+        <img src="{{ img }}" width=400>
+        {% endfor %}
+      </div>
     </div>
     {% endif %}
 
