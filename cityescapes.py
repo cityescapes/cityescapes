@@ -38,4 +38,4 @@ def result():
     print weather
     return render_template("index.html",images=images,search=search,weather=weather)
 
-app.run(debug=True)
+app.run(host='0.0.0.0', port=port, debug=True)
