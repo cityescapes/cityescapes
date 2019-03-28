@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, render_template, request
 import requests
 import pyunsplash
+import os
 
 app = Flask("cityescapes")
 port = int(os.environ.get("PORT", 5000))
