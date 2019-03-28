@@ -6,8 +6,8 @@ import os
 app = Flask("cityescapes")
 port = int(os.environ.get("PORT", 5000))
 
-pu = pyunsplash.PyUnsplash(api_key=os.environ.get("api_key", None))
-W_API_KEY = os.environ.get("W_API_KEY", None)
+pu = pyunsplash.PyUnsplash(api_key=os.environ.get("IMAGE_API_KEY", None))
+WEATHER_API_KEY = os.environ.get("WEATHER_API_KEY", None)
 
 @app.route("/")
 def index():
@@ -24,7 +24,7 @@ def getImages(searchTerm):
 
 def getWeather(searchTerm):
     endpoint = "http://api.openweathermap.org/data/2.5/weather"
-    payload = {"q": searchTerm, "units": "metric", "appid": API_KEY}
+    payload = {"q": searchTerm, "units": "metric", "appid": WEATHER_API_KEY}
     response = requests.get(endpoint, params=payload)
     data = response.json()
     temperature = data["main"]["temp"]
@@ -36,7 +36,6 @@ def result():
     search = request.form["user_search"]
     weather = getWeather(search)
     images = getImages(search)
-    print weather
     return render_template("index.html",images=images,search=search,weather=weather)
 
 app.run(host='0.0.0.0', port=port, debug=True)
