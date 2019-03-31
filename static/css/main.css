@@ -31,6 +31,28 @@ form {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 50px;
+}
+
+.search-box {
+  width: 300px;
+  height: 28px;
+  margin: 0 5px 0 5px;
+  font-size: 15px;
+  color: grey;
+  font-family: 'Crimson Text', sans-serif;
+  padding-left: 6px;
+  border-radius: 3px;
+  border: none;
+}
+
+.submit {
+  background-color: #3dc4ff;
+  padding: 4.5px;
+  width: 90px;
+  font-size: 15px;
+  border-radius: 3px;
+  font-family: 'Crimson Text', sans-serif;
 }
 
 .images {

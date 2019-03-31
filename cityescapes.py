@@ -9,9 +9,17 @@ port = int(os.environ.get("PORT", 5000))
 pu = pyunsplash.PyUnsplash(api_key=os.environ.get("IMAGE_API_KEY", None))
 WEATHER_API_KEY = os.environ.get("WEATHER_API_KEY", None)
 
-@app.route("/")
+@app.route("/index")
 def index():
     return render_template("index.html")
+
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
 
 @app.route("/image")
 def getImages(searchTerm):

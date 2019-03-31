@@ -1,3 +1,5 @@
 credentials.txt
 .vscode/
 .env
+venv
+.DS_Store

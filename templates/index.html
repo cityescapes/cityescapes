@@ -13,9 +13,8 @@
     <div class="cityescapes-title">CityEscapes</div>
 
     <form action="/result" method="post">
-      <label class ="search" for="user_search">Search</label>
-      <input type="text" name="user_search">
-      <input type="submit">
+      <input type="text" name="user_search" placeholder="Search for your destination" class="search-box">
+      <input type="submit" class="submit">
     </form>
 
     {% if search %}
@@ -43,9 +42,9 @@
   <aside class="sidebar">
     <nav class="nav">
       <ul>
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li class="active"><a href="index">Home</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="contact">Contact</a></li>
       </ul>
     </nav>
   </aside>
