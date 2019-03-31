@@ -61,15 +61,20 @@ form .result-search{
 .images {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  justify-content: center;
 }
 
-img {
-  flex: 25%;
+.img-wrapper {
+  height: 300px;
+  width: 400px;
+  overflow: hidden;
+}
+
+.result-images {
   padding: 0 4px;
   margin-top: 8px;
-  vertical-align: middle;
-  flex-direction: column;
+  height: 300px;
+  width: auto;
 }
 
 .search-city-title {

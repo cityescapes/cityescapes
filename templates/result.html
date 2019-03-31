@@ -36,7 +36,7 @@
           <p class="result-text"><i class="fas fa-cloud-rain" id="rain"></i>It's raining in <span class="search-city">{{search}}</span> and {{weather.temperature}} degrees celsius</p>
 
         {% elif weather.condition == "Clear" %}
-          <p class="result-text"><i class="fas fa-sun" id="sun"></i> t's clear in <span class="search-city">{{search}}</span> and {{weather.temperature}} degrees celsius</p>
+          <p class="result-text"><i class="fas fa-sun" id="sun"></i> It's clear in <span class="search-city">{{search}}</span> and {{weather.temperature}} degrees celsius</p>
 
         {% elif weather.condition == "Clouds" %}
           <p class="result-text"><i class="fas fa-cloud" id="cloud"></i>It's cloudy in <span class="search-city">{{search}}</span> and {{weather.temperature}} degrees celsius</p>
@@ -44,7 +44,9 @@
 
         <div class="images">
           {% for img in images %}
-            <img src="{{ img }}" width=400>
+            <div class="img-wrapper">
+              <img class="result-images" src="{{ img }}">
+            </div>
           {% endfor %}
         </div>
       {% else %}
