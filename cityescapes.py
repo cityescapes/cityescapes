@@ -27,6 +27,10 @@ def getWeather(searchTerm):
     payload = {"q": searchTerm, "units": "metric", "appid": WEATHER_API_KEY}
     response = requests.get(endpoint, params=payload)
     data = response.json()
+
+    if response.status_code == 404:
+        return None
+
     temperature = data["main"]["temp"]
     condition = data["weather"][0]["main"]
     return{"temperature": temperature, "condition": condition}
