@@ -11,6 +11,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .cityescapes-title {
@@ -89,7 +90,7 @@ img {
       transition: all ease-out 300ms;
     }
 
-    
+
   }
 }
 
