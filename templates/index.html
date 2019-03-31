@@ -4,7 +4,8 @@
     <title>CityEscapes</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css') }}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" src="./static/css/main.css">
   </head>
 
   <body>
@@ -12,7 +13,7 @@
     <div class="cityescapes-title">CityEscapes</div>
 
     <form action="/result" method="post">
-      <label for="user_search">Search</label>
+      <label class ="search" for="user_search">Search</label>
       <input type="text" name="user_search">
       <input type="submit">
     </form>
@@ -28,6 +29,46 @@
       </div>
     </div>
     {% endif %}
+
+    <!-- This is a reverse engineering of the "Hyperspace"
+     design from HTML5 Up! https://html5up.net/hyperspace -->
+
+<main class="main">
+  <aside class="sidebar">
+    <nav class="nav">
+      <ul>
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </aside>
+</main>
+
+<div class="footer">
+  <section class="twitter">
+    <div class="container">
+      <a target="_blank" class= "fa" href="https://twitter.com">
+        <img class="social" src="https://img.icons8.com/color/96/000000/twitter.png">
+      </a>
+      <a target="_blank" class= "fa" href="https://facebook.com">
+        <img class="social" src="https://img.icons8.com/color/96/000000/facebook.png">
+      </a>
+      <a target="_blank" class= "fa" href="https://instagram.com">
+        <img class="social" src="https://img.icons8.com/color/96/000000/instagram-new.png">
+      </a>
+      <a target="_blank" class= "fa" href="https://pinterest.com">
+        <img class="social" src="https://img.icons8.com/color/96/000000/pinterest.png">
+      </a>
+      <a target="_blank" class= "fa" href="https://youtube.com">
+        <img class="social" src="https://img.icons8.com/color/96/000000/youtube-play.png">
+      </a>
+      <a target="_blank" class= "fa" href="https://spotify.com">
+        <img class="social" src="https://img.icons8.com/color/96/000000/spotify.png">
+      </a>
+    </div>
+  </section>
+</div>
 
   </body>
 </html>

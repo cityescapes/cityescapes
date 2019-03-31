@@ -1,15 +1,29 @@
-body {
+html {
   padding: 0;
   margin: 0;
-  background-color: #42f4d9;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Crimson Text', sans-serif;
+  height: 100%;
+  font size: 50px;
+}
+
+body {
+  background-image: url("homepage.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .cityescapes-title {
-  font-size: 80px;
-  color: white;
+  font-size: 100px;
+  color: black;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
+  font-family: 'Crimson Text', sans-serif;
+}
+
+.search {
+  font-family: 'Crimson Text', sans-serif;
+  font: white;
 }
 
 form {
@@ -30,4 +44,84 @@ img {
   margin-top: 8px;
   vertical-align: middle;
   flex-direction: column;
+}
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.sidebar {
+  position: fixed;
+  width: 25%;
+  height: 20vh;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 50px;
+}
+
+.nav {
+  position: relative;
+  margin: 0 15%;
+  text-align: right;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+  font-family: 'Crimson Text', sans-serif;
+}
+
+.nav ul {
+  list-style: none;
+
+  li {
+    position: relative;
+    margin: 3.2em 0;
+
+    a {
+      line-height: 5em;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 0.4em;
+      color: white;
+      display: block;
+      transition: all ease-out 300ms;
+    }
+
+    
+  }
+}
+
+.twitter {
+  position: center;
+  width: 75%;
+  float: right;
+  height: 100vh;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  a {
+    position: relative;
+  }
+
+  p {
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    color: #FFF;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+}
+
+.footer .fa {
+  padding-left: 50px;
+  padding-top: 430px;
 }
