@@ -9,7 +9,7 @@ port = int(os.environ.get("PORT", 5000))
 pu = pyunsplash.PyUnsplash(api_key=os.environ.get("IMAGE_API_KEY", None))
 WEATHER_API_KEY = os.environ.get("WEATHER_API_KEY", None)
 
-@app.route("/index")
+@app.route("/")
 def index():
     return render_template("index.html")
 
@@ -48,6 +48,6 @@ def result():
     search = request.form["user_search"]
     weather = getWeather(search)
     images = getImages(search)
-    return render_template("index.html",images=images,search=search,weather=weather)
+    return render_template("result.html",images=images,search=search,weather=weather)
 
 app.run(host='0.0.0.0', port=port, debug=True)
