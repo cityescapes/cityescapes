@@ -1,0 +1,136 @@
+html {
+  padding: 0;
+  margin: 0;
+  font-family: 'Crimson Text', sans-serif;
+  height: 100%;
+  font size: 50px;
+}
+
+body {
+  background-image: url("santorini.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cityescapes-title {
+  font-size: 100px;
+  color: black;
+  text-align: center;
+  padding: 20px;
+  font-family: 'Crimson Text', sans-serif;
+}
+
+.search {
+  font-family: 'Crimson Text', sans-serif;
+  font: white;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+img {
+  flex: 25%;
+  padding: 0 4px;
+  margin-top: 8px;
+  vertical-align: middle;
+  flex-direction: column;
+}
+
+.textbox {
+    color: white;
+    margin-left: 340px;
+    margin-right: 100px;
+		text-align: center;
+		float: center;
+    background-color: rgba(255, 0, 0, 0.3);
+}
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.sidebar {
+  position: fixed;
+  width: 25%;
+  height: 20vh;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 50px;
+}
+
+.nav {
+  position: relative;
+  margin: 0 15%;
+  text-align: right;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+  font-family: 'Crimson Text', sans-serif;
+}
+
+.nav ul {
+  list-style: none;
+
+  li {
+    position: relative;
+    margin: 3.2em 0;
+
+    a {
+      line-height: 5em;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 0.4em;
+      color: white;
+      display: block;
+      transition: all ease-out 300ms;
+    }
+
+
+  }
+}
+
+.twitter {
+  position: center;
+  width: 75%;
+  float: right;
+  height: 100vh;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  a {
+    position: relative;
+  }
+
+  p {
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    color: #FFF;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+}
+
+.footer .fa {
+  padding-left: 50px;
+  padding-top: 430px;
+}
