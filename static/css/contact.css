@@ -21,94 +21,56 @@ body {
   font-family: 'Crimson Text', sans-serif;
 }
 
-.images {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-img {
-  flex: 25%;
-  padding: 0 4px;
-  margin-top: 8px;
-  vertical-align: middle;
-  flex-direction: column;
-}
-
-
-
-
-
-
-
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
+/* Nav bar */
 .sidebar {
   position: fixed;
-  height: 20vh;
-  font-size: 50px;
+  font-size: 35px;
+  background-color: rgba(255, 0, 0, 0.3);
+  left: 0;
+  margin-top: 20px;
 }
 
 .nav {
-  position: relative;
-  margin: 0 15%;
-  text-align: right;
-  top: 50%;
-  transform: translateY(-50%);
   font-weight: bold;
   font-family: 'Crimson Text', sans-serif;
+  padding-right: 20px;
 }
 
 .nav ul {
   list-style: none;
-
-  li {
-    position: relative;
-    margin: 3.2em 0;
-
-    a {
-      line-height: 5em;
-      text-transform: uppercase;
-      text-decoration: none;
-      letter-spacing: 0.4em;
-      color: white;
-      display: block;
-      transition: all ease-out 300ms;
-    }
-
-
-  }
 }
 
-.twitter {
-  position: center;
-  width: 75%;
-  float: right;
-  height: 100vh;
-
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-  }
-
-  a {
-    position: relative;
-  }
-
-  p {
-    text-transform: uppercase;
-    font-size: 1em;
-    letter-spacing: 0.1em;
-    color: #FFF;
-    font-weight: bold;
-    margin-top: 20px;
-  }
+.nav a {
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.2em;
+  color: white;
 }
 
-.footer .fa {
-  padding-left: 50px;
-  padding-top: 430px;
+.nav a:hover {
+  color: black;
+}
+
+/* Footer */
+.container {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  height: 40px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  justify-content: center;
+}
+
+.follow-us {
+  color: black;
+  margin-left: 15px;
+}
+
+.social {
+  padding-left: 15px;
+  height: 30px;
+  justify-content: center;
 }
