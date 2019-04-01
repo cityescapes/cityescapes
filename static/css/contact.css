@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  background-image: url("paris.jpg");
+  background-image: url("../images/paris.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -19,17 +19,6 @@ body {
   text-align: center;
   padding: 20px;
   font-family: 'Crimson Text', sans-serif;
-}
-
-.search {
-  font-family: 'Crimson Text', sans-serif;
-  font: white;
-}
-
-form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .images {
