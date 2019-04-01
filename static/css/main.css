@@ -171,24 +171,6 @@ form .result-search{
   }
 }
 
-.twitter {
-  position: center;
-  width: 75%;
-  float: right;
-  height: 100vh;
-
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-  }
-
-  a {
-    position: relative;
-  }
-
   p {
     text-transform: uppercase;
     font-size: 1em;
@@ -199,7 +181,27 @@ form .result-search{
   }
 }
 
-.footer .fa {
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: center;
+  float: right;
+  height: 100vh;
+}
+
+.container {
+  position: fixed;
+  height: 100px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+}
+
+.social {
   padding-left: 50px;
-  padding-top: 430px;
+  font-size: : 10px;
 }
