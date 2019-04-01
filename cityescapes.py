@@ -23,7 +23,7 @@ def contact():
 
 @app.route("/image")
 def getImages(searchTerm):
-    search = pu.search(type_="photos", query=searchTerm)
+    search = pu.search(type_="photos", query=searchTerm, per_page=20)
     links = []
     for photo in search.entries:
         photoURL = photo.body.get("urls").get("regular")

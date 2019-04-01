@@ -22,37 +22,41 @@
       </aside>
     </main>
 
-    <form action="/result" method="post" class="result-search">
-      <input type="text" name="user_search" placeholder="Search for another destination" class="search-box">
-      <input type="submit" class="submit">
-    </form>
+    <div class="content">
 
-    <div class="search-city-title">{{search}}</div>
+      <form action="/result" method="post" class="result-search">
+        <input type="text" name="user_search" placeholder="Search for another destination" class="search-box">
+        <input type="submit" class="submit">
+      </form>
 
-    {% if search %}
-      {% if weather %}
+      <div class="search-city-title">{{search}}</div>
 
-        {% if weather.condition == "Rain" %}
-          <p class="result-text"><i class="fas fa-cloud-rain" id="rain"></i>It's raining in <span class="search-city">{{search}}</span> and {{weather.temperature}} degrees celsius</p>
+      {% if search %}
+        {% if weather %}
 
-        {% elif weather.condition == "Clear" %}
-          <p class="result-text"><i class="fas fa-sun" id="sun"></i> It's clear in <span class="search-city">{{search}}</span> and {{weather.temperature}} degrees celsius</p>
+          {% if weather.condition == "Rain" %}
+            <p class="result-text"><i class="fas fa-cloud-rain" id="rain"></i>It's raining in <span class="search-city">{{search}}</span> and {{weather.temperature}} degrees celsius</p>
 
-        {% elif weather.condition == "Clouds" %}
-          <p class="result-text"><i class="fas fa-cloud" id="cloud"></i>It's cloudy in <span class="search-city">{{search}}</span> and {{weather.temperature}} degrees celsius</p>
+          {% elif weather.condition == "Clear" %}
+            <p class="result-text"><i class="fas fa-sun" id="sun"></i> It's clear in <span class="search-city">{{search}}</span> and {{weather.temperature}} degrees celsius</p>
+
+          {% elif weather.condition == "Clouds" %}
+            <p class="result-text"><i class="fas fa-cloud" id="cloud"></i>It's cloudy in <span class="search-city">{{search}}</span> and {{weather.temperature}} degrees celsius</p>
+          {% endif %}
+
+          <div class="images">
+            {% for img in images %}
+              <div class="img-wrapper">
+                <img class="result-images" src="{{ img }}">
+              </div>
+            {% endfor %}
+          </div>
+          {% else %}
+            <p class="result-text">No results found, try searching for New York or Paris</p>
         {% endif %}
-
-        <div class="images">
-          {% for img in images %}
-            <div class="img-wrapper">
-              <img class="result-images" src="{{ img }}">
-            </div>
-          {% endfor %}
-        </div>
-      {% else %}
-        <p class="result-text">No results found, try searching for New York or Paris</p>
       {% endif %}
-    {% endif %}
+
+    </div>
 
     <div class="footer">
       <section class="twitter">

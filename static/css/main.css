@@ -14,8 +14,12 @@ body {
   background-attachment: fixed;
 }
 
-.result-body {
-  background-image: none;
+.content {
+  display: flex;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-direction: column;
 }
 
 .cityescapes-title {
@@ -26,6 +30,7 @@ body {
   font-family: 'Crimson Text', sans-serif;
 }
 
+/*Form*/
 form {
   display: flex;
   align-items: center;
@@ -36,7 +41,7 @@ form {
 .search-box {
   width: 300px;
   height: 28px;
-  margin: 0 5px 0 5px;
+  margin: 0 5px;
   font-size: 15px;
   color: grey;
   font-family: Arial, Helvetica, sans-serif;
@@ -55,28 +60,13 @@ form {
   color: white;
 }
 
-form .result-search{
+/* result.html */
+/* Body of result.html */
+.result-body {
+  background-image: none;
 }
 
-.images {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.img-wrapper {
-  height: 300px;
-  width: 400px;
-  overflow: hidden;
-}
-
-.result-images {
-  padding: 0 4px;
-  margin-top: 8px;
-  height: 300px;
-  width: auto;
-}
-
+/* City title */
 .search-city-title {
   font-size: 100px;
   color: black;
@@ -84,6 +74,30 @@ form .result-search{
   padding: 20px;
   font-family: 'Crimson Text', sans-serif;
   text-transform: capitalize;
+}
+
+form .result-search{
+}
+
+/* Result images */
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.img-wrapper {
+  float: 25%;
+  max-width: 25%;
+  overflow: hidden;
+}
+
+.result-images {
+  padding: 0 4px;
+  margin-top: 8px;
+  max-height: 300px;
+  width: auto;
+  vertical-align: middle;
 }
 
 .result-text {
@@ -97,6 +111,7 @@ form .result-search{
   margin: 0 4px 0 4px;
 }
 
+/* Weather icons */
 #rain{
   color: #3b89f7;
   font-size: 50px;
