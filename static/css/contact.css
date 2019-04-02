@@ -8,9 +8,10 @@ html {
 
 body {
   background-image: url("../images/paris.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .cityescapes-title {
@@ -51,7 +52,16 @@ body {
   color: black;
 }
 
-
+/* Content */
+.content {
+  display: flex;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-direction: column;
+  margin-top: 25px;
+  margin-bottom: 85px;
+}
 
 /*FORM*/
 
@@ -64,6 +74,7 @@ input[type=text], select, textarea {
   margin-top: 6px; /* Add a top margin */
   margin-bottom: 16px; /* Bottom margin */
   resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
 
   /* Style the submit button with a specific background color etc */
 input[type=submit] {
@@ -80,18 +91,11 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
-.contain {
+.container-contact {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
-
-
-
-
-
-
-
-
+}
 
 /* Footer */
 .container {
@@ -115,3 +119,4 @@ input[type=submit]:hover {
   padding-left: 15px;
   height: 30px;
   justify-content: center;
+}

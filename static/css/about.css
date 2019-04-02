@@ -8,9 +8,10 @@ html {
 
 body {
   background-image: url("../images/santorini.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .cityescapes-title {
@@ -21,27 +22,14 @@ body {
   font-family: 'Crimson Text', sans-serif;
 }
 
-.images {
+.content {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-img {
-  flex: 25%;
-  padding: 0 4px;
-  margin-top: 8px;
-  vertical-align: middle;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
   flex-direction: column;
-}
-
-.textbox {
-    color: white;
-    margin-left: 340px;
-    margin-right: 100px;
-		text-align: center;
-		float: center;
-    background-color: rgba(255, 0, 0, 0.3);
+  margin-top: 25px;
+  margin-bottom: 85px;
 }
 
 /* Nav bar */
@@ -72,6 +60,25 @@ img {
 
 .nav a:hover {
   color: black;
+}
+
+/* Content */
+.textbox {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-align: center;
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+.bio {
+  flex: 50%;
+}
+
+.about-us-images {
+  border: 2px;
+  padding: 20px;
+  height: 200px;
 }
 
 /* Footer */

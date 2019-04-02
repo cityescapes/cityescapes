@@ -22,14 +22,14 @@
       </aside>
     </main>
 
+    <div class="search-city-title">{{search}}</div>
+    
     <div class="content">
 
       <form action="/result" method="post" class="result-search">
         <input type="text" name="user_search" placeholder="Search for another destination" class="search-box">
         <input type="submit" class="submit">
       </form>
-
-      <div class="search-city-title">{{search}}</div>
 
       {% if search %}
         {% if weather %}
@@ -81,6 +81,6 @@
           </a>
         </div>
     </footer>
-    
+
   </body>
 </html>
