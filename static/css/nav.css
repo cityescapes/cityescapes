@@ -1,0 +1,45 @@
+/* Nav bar */
+.sidebar {
+  position: fixed;
+  font-size: 35px;
+  background-color: rgba(255, 0, 0, 0.3);
+  left: 0;
+  margin-top: 20px;
+  transform: translateX(calc(-100% + 60px));
+  transition: transform 0.4s ease-out;
+  padding-right: 60px;
+}
+
+.sidebar.shown{
+  transform: translateX(0%);
+}
+
+.menu-button {
+  color: white;
+  position: absolute;
+  top: calc(50% - 15.3px);
+  right: 15px;
+  cursor: pointer;
+  transform: rotate(90deg);
+}
+
+.nav {
+  font-weight: bold;
+  font-family: 'Crimson Text', sans-serif;
+  padding-right: 20px;
+}
+
+.nav ul {
+  list-style: none;
+}
+
+.nav a {
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.2em;
+  color: white;
+}
+
+.nav a:hover {
+  color: black;
+}

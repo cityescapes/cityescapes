@@ -3,81 +3,79 @@
   <head>
     <title>CityEscapes</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/contact.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/nav.css') }}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" src="./static/css/contact.css">
   </head>
 
   <body>
+    <aside class="sidebar">
+      <nav class="nav">
+        <ul>
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="about">About</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <i class="fas fa-bars menu-button"></i>
+    </aside>
 
     <main class="main">
-      <aside class="sidebar">
-        <nav class="nav">
-          <ul>
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="about">About</a></li>
-            <li><a href="contact">Contact</a></li>
-          </ul>
-        </nav>
-      </aside>
+      <div class="cityescapes-title">CityEscapes</div>
+
+      <div class="content">
+        <div class="container-contact" text-align="right">
+         <form action="action_page.php">
+
+          <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+          <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+          <label for="country">Country</label>
+            <select id="country" name="country" style="height:30px;">
+              <option value="australia">Australia</option>
+              <option value="canada">Canada</option>
+              <option value="france">France</option>
+              <option value="japen">Japan</option>
+              <option value="usa">USA</option>
+              <option value="UK">UK</option>
+            </select>
+
+          <label for="subject">Tell Us About Where You Want To Go</label>
+            <textarea id="subject" name="Subject" placeholder="Write something.." style="height:125px"></textarea>
+
+          <input type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
     </main>
 
-    <div class="cityescapes-title">CityEscapes</div>
-    
-    <div class="content">
-
-      <div class="container-contact" text-align="right">
-       <form action="action_page.php">
-
-        <label for="fname">First Name</label>
-          <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-        <label for="lname">Last Name</label>
-          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-        <label for="country">Country</label>
-          <select id="country" name="country" style="height:30px;">
-            <option value="australia">Australia</option>
-            <option value="canada">Canada</option>
-            <option value="france">France</option>
-            <option value="japen">Japan</option>
-            <option value="usa">USA</option>
-            <option value="UK">UK</option>
-          </select>
-
-        <label for="subject">Tell Us About Where You Want To Go</label>
-          <textarea id="subject" name="Subject" placeholder="Write something.." style="height:125px"></textarea>
-
-      <input type="submit" value="Submit">
-
-     </form>
-    </div>
-
-    </div>
-
     <footer>
-        <div class="container">
-          <div class="follow-us"><p>Follow us!</p></div>
-          <a target="_blank" class= "fa" href="https://twitter.com">
-            <img class="social" src="https://img.icons8.com/color/96/000000/twitter.png">
-          </a>
-          <a target="_blank" class= "fa" href="https://facebook.com">
-            <img class="social" src="https://img.icons8.com/color/96/000000/facebook.png">
-          </a>
-          <a target="_blank" class= "fa" href="https://instagram.com">
-            <img class="social" src="https://img.icons8.com/color/96/000000/instagram-new.png">
-          </a>
-          <a target="_blank" class= "fa" href="https://pinterest.com">
-            <img class="social" id="pint" src="https://img.icons8.com/color/96/000000/pinterest.png">
-          </a>
-          <a target="_blank" class= "fa" href="https://youtube.com">
-            <img class="social" src="https://img.icons8.com/color/96/000000/youtube-play.png">
-          </a>
-          <a target="_blank" class= "fa" href="https://spotify.com">
-            <img class="social" src="https://img.icons8.com/color/96/000000/spotify.png">
-          </a>
-        </div>
+      <div class="container">
+        <div class="follow-us"><p>Follow us!</p></div>
+        <a target="_blank" class= "fa" href="https://twitter.com">
+          <img class="social" src="https://img.icons8.com/color/96/000000/twitter.png">
+        </a>
+        <a target="_blank" class= "fa" href="https://facebook.com">
+          <img class="social" src="https://img.icons8.com/color/96/000000/facebook.png">
+        </a>
+        <a target="_blank" class= "fa" href="https://instagram.com">
+          <img class="social" src="https://img.icons8.com/color/96/000000/instagram-new.png">
+        </a>
+        <a target="_blank" class= "fa" href="https://pinterest.com">
+          <img class="social" id="pint" src="https://img.icons8.com/color/96/000000/pinterest.png">
+        </a>
+        <a target="_blank" class= "fa" href="https://youtube.com">
+          <img class="social" src="https://img.icons8.com/color/96/000000/youtube-play.png">
+        </a>
+        <a target="_blank" class= "fa" href="https://spotify.com">
+          <img class="social" src="https://img.icons8.com/color/96/000000/spotify.png">
+        </a>
+      </div>  
     </footer>
-
+    <script src="./static/js/main.js"></script>
   </body>
 </html>

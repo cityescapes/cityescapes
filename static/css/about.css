@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  background-image: url("../images/santorini.jpg");
+  background-image: url("../images/london.jpeg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -32,47 +32,40 @@ body {
   margin-bottom: 85px;
 }
 
-/* Nav bar */
-.sidebar {
-  position: fixed;
-  font-size: 35px;
-  background-color: rgba(255, 0, 0, 0.3);
-  left: 0;
-  margin-top: 20px;
-}
-
-.nav {
-  font-weight: bold;
-  font-family: 'Crimson Text', sans-serif;
-  padding-right: 20px;
-}
-
-.nav ul {
-  list-style: none;
-}
-
-.nav a {
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 0.2em;
-  color: white;
-}
-
-.nav a:hover {
-  color: black;
-}
-
 /* Content */
 .textbox {
+  color: white;
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+.team-bio {
   display: flex;
   align-items: center;
-  color: white;
   text-align: center;
-  background-color: rgba(255, 0, 0, 0.3);
+}
+
+.meet-team {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
 }
 
 .bio {
   flex: 50%;
+}
+
+.bio h1 {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.bio h2 {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 
 .about-us-images {

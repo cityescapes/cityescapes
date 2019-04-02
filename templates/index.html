@@ -3,63 +3,62 @@
   <head>
     <title>CityEscapes</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/nav.css') }}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" src="./static/css/main.css">
   </head>
 
   <body>
+    <aside class="sidebar">
+      <nav class="nav">
+        <ul>
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="about">About</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <i class="fas fa-bars menu-button"></i>
+    </aside>
 
     <main class="main">
-      <aside class="sidebar">
-        <nav class="nav">
-          <ul>
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="about">About</a></li>
-            <li><a href="contact">Contact</a></li>
-          </ul>
-        </nav>
-      </aside>
+      <div class="cityescapes-title">CityEscapes</div>
+
+      <div class="content">
+        <form action="/result" method="post">
+          <input type="text" name="user_search" placeholder="Search for your destination" class="search-box">
+          <input type="submit" class="submit">
+        </form>
+
+        <div class="website-descripton">
+          <p>Search for a city you want to visit!</p>
+        </div>
+      </div>
     </main>
 
-    <div class="cityescapes-title">CityEscapes</div>
-
-    <div class="content">
-
-      <form action="/result" method="post">
-        <input type="text" name="user_search" placeholder="Search for your destination" class="search-box">
-        <input type="submit" class="submit">
-      </form>
-
-      <div class="website-descripton">
-        <p>Search for a city you want to visit!</p>
-      </div>
-
-    </div>
-
     <footer>
-        <div class="container">
-          <div class="follow-us"><p>Follow us!</p></div>
-          <a target="_blank" class= "fa" href="https://twitter.com">
-            <img class="social" src="https://img.icons8.com/color/96/000000/twitter.png">
-          </a>
-          <a target="_blank" class= "fa" href="https://facebook.com">
-            <img class="social" src="https://img.icons8.com/color/96/000000/facebook.png">
-          </a>
-          <a target="_blank" class= "fa" href="https://instagram.com">
-            <img class="social" src="https://img.icons8.com/color/96/000000/instagram-new.png">
-          </a>
-          <a target="_blank" class= "fa" href="https://pinterest.com">
-            <img class="social" id="pint" src="https://img.icons8.com/color/96/000000/pinterest.png">
-          </a>
-          <a target="_blank" class= "fa" href="https://youtube.com">
-            <img class="social" src="https://img.icons8.com/color/96/000000/youtube-play.png">
-          </a>
-          <a target="_blank" class= "fa" href="https://spotify.com">
-            <img class="social" src="https://img.icons8.com/color/96/000000/spotify.png">
-          </a>
-        </div>
+      <div class="container">
+        <div class="follow-us"><p>Follow us!</p></div>
+        <a target="_blank" class= "fa" href="https://twitter.com">
+          <img class="social" src="https://img.icons8.com/color/96/000000/twitter.png">
+        </a>
+        <a target="_blank" class= "fa" href="https://facebook.com">
+          <img class="social" src="https://img.icons8.com/color/96/000000/facebook.png">
+        </a>
+        <a target="_blank" class= "fa" href="https://instagram.com">
+          <img class="social" src="https://img.icons8.com/color/96/000000/instagram-new.png">
+        </a>
+        <a target="_blank" class= "fa" href="https://pinterest.com">
+          <img class="social" id="pint" src="https://img.icons8.com/color/96/000000/pinterest.png">
+        </a>
+        <a target="_blank" class= "fa" href="https://youtube.com">
+          <img class="social" src="https://img.icons8.com/color/96/000000/youtube-play.png">
+        </a>
+        <a target="_blank" class= "fa" href="https://spotify.com">
+          <img class="social" src="https://img.icons8.com/color/96/000000/spotify.png">
+        </a>
+      </div>
     </footer>
-
+    <script src="./static/js/main.js"></script>
   </body>
 </html>

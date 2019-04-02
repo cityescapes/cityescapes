@@ -3,43 +3,46 @@
   <head>
     <title>CityEscapes</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/about.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/nav.css') }}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" src="./static/css/about.css">
   </head>
 
   <body>
+    <aside class="sidebar">
+      <nav class="nav">
+        <ul>
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="about">About</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <i class="fas fa-bars menu-button"></i>
+    </aside>
 
     <main class="main">
-      <aside class="sidebar">
-        <nav class="nav">
-          <ul>
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="about">About</a></li>
-            <li><a href="contact">Contact</a></li>
-          </ul>
-        </nav>
-      </aside>
+      <div class="cityescapes-title">CityEscapes</div>
+
+      <div class="content">
+        <blockquote class="textbox">
+          <h1 class="meet-team">Meet The Team!</h1>
+          <div class="team-bio">
+            <div class="bio">
+              <h1>Carys Blackburn</h1>
+              <h2>Favourite City: New York</h2>
+              <img src="../static/images/carys.jpg" height="200" alt="Carys" class="about-us-images">
+            </div>
+            <div class="bio">
+              <h1>Jennie Williams</h1>
+              <h2>Favourite City: London (boring I know)</h2>
+              <img src="../static/images/jennie.jpg" height="200" alt="Jennie" class="about-us-images">
+           </div>
+         </div>
+        </blockquote>
+
+      </div>
     </main>
-
-    <div class="cityescapes-title">CityEscapes</div>
-
-    <div class="content">
-
-      <blockquote class="textbox">
-        <div class="bio">
-          <h1>Carys Blackburn</h1>
-          <h2>Favourite City: New York</h2>
-          <img src="../static/images/carys.jpg" height="200" alt="Carys" class="about-us-images">
-        </div>
-        <div class="bio">
-          <h1>Jennie Williams</h1>
-          <h2>Favourite City: London (boring I know)</h2>
-          <img src="../static/images/jennie.jpg" height="200" alt="Jennie" class="about-us-images">
-       </div>
-      </blockquote>
-
-    </div>
 
     <footer>
         <div class="container">
@@ -64,6 +67,6 @@
           </a>
         </div>
     </footer>
-
+    <script src="./static/js/main.js"></script>
   </body>
 </html>
