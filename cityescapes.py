@@ -2,6 +2,7 @@ from flask import Flask, jsonify, render_template, request
 import requests
 import pyunsplash
 import os
+import json
 
 app = Flask("cityescapes")
 port = int(os.environ.get("PORT", 5000))
@@ -19,9 +20,9 @@ def about():
 
 @app.route("/contact")
 def contact():
-    return render_template("contact.html")
+    countries = getCountries()
+    return render_template("contact.html",countries=countries)
 
-@app.route("/image")
 def getImages(searchTerm):
     search = pu.search(type_="photos", query=searchTerm, per_page=20)
     links = []
@@ -49,5 +50,15 @@ def result():
     weather = getWeather(search)
     images = getImages(search)
     return render_template("result.html",images=images,search=search,weather=weather)
+
+def getCountries():
+    endpoint = "http://restcountries.eu/rest/v2/all"
+    response = requests.get(endpoint)
+    data = response.json()
+    countryNames = []
+    for country in data:
+        countryName = country["name"]
+        countryNames.append(countryName)
+    return countryNames
 
 app.run(host='0.0.0.0', port=port, debug=True)

@@ -36,12 +36,16 @@
 
           <label for="country">Country</label>
             <select id="country" name="country" style="height:30px;">
-              <option value="australia">Australia</option>
-              <option value="canada">Canada</option>
-              <option value="france">France</option>
-              <option value="japen">Japan</option>
-              <option value="usa">USA</option>
-              <option value="UK">UK</option>
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="United States">United States</option>
+              <option value="China">China</option>
+              <option value="Germany">Germany</option>
+              <option value="France">France</option>
+              <option value="Mexico">Mexico</option>
+              <option value="Null">---</option>
+              {% for country in countries %}
+                <option value="{{ country }}">{{country}}</option>
+              {% endfor %}
             </select>
 
           <label for="subject">Tell Us About Where You Want To Go</label>
@@ -74,7 +78,7 @@
         <a target="_blank" class= "fa" href="https://spotify.com">
           <img class="social" src="https://img.icons8.com/color/96/000000/spotify.png">
         </a>
-      </div>  
+      </div>
     </footer>
     <script src="./static/js/main.js"></script>
   </body>
